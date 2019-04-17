@@ -359,6 +359,6 @@ if __name__ == '__main__':
         for eval_name in eval_defenses.keys():
           row = ([attack_name, def_name, eval_name, correct[eval_name], total] +
                  metrics_summarized)
-          print row
+          print(row)
           writer.writerow(row)
           f.flush()

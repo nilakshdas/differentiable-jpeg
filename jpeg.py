@@ -160,6 +160,7 @@ def patches_to_image(patches, height, width):
   # output: batch x h x w
   k = 8
   batch_size = tf.shape(patches)[0]
+  height, width = int(height), int(width)
   image_reshaped = tf.reshape(patches,
                               [batch_size, height // k, width // k, k, k])
   image_transposed = tf.transpose(image_reshaped, [0, 1, 3, 2, 4])
