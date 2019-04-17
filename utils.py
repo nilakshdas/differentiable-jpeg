@@ -1,11 +1,14 @@
 import io
+import os
 import sys
 
 import numpy as np
 import tensorflow as tf
 import PIL.Image
 
-sys.path.insert(0, 'slim')
+sys.path.insert(0, os.path.join(
+  os.path.dirname(os.path.abspath(__file__)), 
+  'models/research/slim'))
 from nets import nets_factory
 from preprocessing import preprocessing_factory
 
